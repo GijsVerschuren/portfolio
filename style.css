@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.great-vibes-regular {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
 body {
     background-image: linear-gradient(#10002b, #3c096c);
     background-repeat: no-repeat;
@@ -78,4 +85,21 @@ body {
     position: fixed;
     bottom: 0;
     z-index: -2;
+}
+
+.text {
+    font-size: 4rem;
+    color: white;
+    text-align: start;
+    font-family: "Great Vibes", cursive;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 5vh;
+    left: 44vw;
+    display: none;
+}
+
+.one:hover +.text {
+    display: block;
 }
