@@ -97,9 +97,9 @@ body {
     position: fixed;
     top: 5vh;
     left: 44vw;
-    display: none;
 }
 
 .one:hover + .text {
     display: block;
 }
+
