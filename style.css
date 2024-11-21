@@ -98,8 +98,3 @@ body {
     top: 5vh;
     left: 44vw;
 }
-
-.one:hover + .text {
-    display: block;
-}
-
