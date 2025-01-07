@@ -19,18 +19,3 @@ function HomeText() {
 
 document.addEventListener('DOMContentLoaded', HomeText);
 
-/*
-
-let i = 0;
-        textDiv.innerHTML = '';
-        textDiv.appendChild(svgElement);
-        textDiv.style.display = 'block';
-        const interval = setInterval(() => {
-            if (i < textContent.length) {
-                textDiv.innerHTML = textContent.substring(0, i + 1);
-                textDiv.appendChild(svgElement);
-                i++;
-            } else {
-                clearInterval(interval);
-            }
-        }, 100);*/
