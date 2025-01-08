@@ -110,6 +110,35 @@ body {
 }
 
 
+.aboutMe {
+    font-size: 4rem;
+    color: white;
+    text-align: start;
+    font-family: "Great Vibes", cursive;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 5vh;
+    left: 42vw;
+    /* display: none; */
+}
+
+
+.contact {
+    font-size: 4rem;
+    color: white;
+    text-align: start;
+    font-family: "Great Vibes", cursive;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 5vh;
+    left: 42vw;
+    /* display: none; */
+}
+
+
+
 /* home text animations */
 .text path {
     stroke-dasharray: 478;
@@ -162,3 +191,77 @@ body {
         fill: #fff
     }
 }
+
+
+
+/* about me text animations*/
+.aboutMe path {
+    stroke-dasharray: 468;
+    stroke-dashoffset: 468;
+
+}
+
+.aboutMe.show path {
+    animation: dash 3s linear forwards;
+    /* transition: fill 0.3s !important; */
+}
+
+#three:hover~.aboutMe {
+    display: block;
+
+}
+
+@keyframes dash {
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    100% {
+        fill: #fff
+    }
+}
+
+
+
+
+/* contact text animations*/
+.contact path {
+    stroke-dasharray: 232;
+    stroke-dashoffset: 232;
+
+}
+
+.contact.show path {
+    animation: dash 3s linear forwards;
+    /* transition: fill 0.3s !important; */
+}
+
+#four:hover~.contact {
+    display: block;
+
+}
+
+@keyframes dash {
+    50% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+
+    }
+
+    70% {
+        stroke-dashoffset: 0;
+        fill: transparent;
+    }
+
+    100% {
+        fill: #fff
+    }
+}
+
