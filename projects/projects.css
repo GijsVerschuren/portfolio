@@ -31,7 +31,7 @@ body {
 
 .content {
     width: 870px;
-    background-color: grey;
+    background-color: #08040f;
     height: 532px;
     z-index: -1;
     position: absolute;
