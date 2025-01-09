@@ -16,6 +16,10 @@ function HomeText() {
         textDiv.classList.remove("show");
 
     });
+
+    oneDiv.addEventListener('click', () => {
+        location.href = "index.html";
+    });
 }
 
 document.addEventListener('DOMContentLoaded', HomeText);
@@ -39,6 +43,10 @@ function projectText() {
     twoDiv.addEventListener('mouseout', () => {
         projectDiv.classList.remove("show");
 
+    });
+
+    twoDiv.addEventListener('click', () => {
+        location.href = "../projects/projects.html";
     });
 }
 
