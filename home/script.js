@@ -72,6 +72,10 @@ function AboutMeText() {
         aboutMeDiv.classList.remove("show");
 
     });
+
+    threeDiv.addEventListener('click', () => {
+        location.href = "../aboutme/aboutme.html";
+    });
 }
 
 document.addEventListener('DOMContentLoaded', AboutMeText);
@@ -96,6 +100,10 @@ function contactText() {
     fourDiv.addEventListener('mouseout', () => {
         contactDiv.classList.remove("show");
 
+    });
+
+    fourDiv.addEventListener('click', () => {
+        location.href = "../contact/contact.php";
     });
 }
 
