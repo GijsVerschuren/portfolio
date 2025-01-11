@@ -30,9 +30,9 @@ body {
 }
 
 .content {
-    width: 870px;
+    width: 860px;
     background-color: #08040f;
-    height: 532px;
+    height: 520px;
     z-index: -1;
     position: absolute;
     top: 50%;

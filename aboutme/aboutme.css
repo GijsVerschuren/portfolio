@@ -30,12 +30,30 @@ body {
 }
 
 .content {
-    width: 870px;
+    width: 860px;
     background-color: #08040f;
-    height: 532px;
+    height: 520px;
     z-index: -1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    margin: 20px;
+    font-size: 2.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
