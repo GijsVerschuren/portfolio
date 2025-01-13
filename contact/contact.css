@@ -31,11 +31,31 @@ body {
 
 .content {
     width: 860px;
-    background-color: #08040f;
     height: 520px;
     z-index: -1;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 5;
+}
+
+.plank,
+.plank * {
+    pointer-events: none !important;
+}
+
+
+.linkDiv {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 10%;
+    height: 10%;
+    z-index: 2000;
+}
+
+.linkDiv a {
+    width: 10vw;
+    height: 10vh;
 }
