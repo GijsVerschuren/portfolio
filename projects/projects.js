@@ -1,25 +1,18 @@
 let projectIndex = 1;
 
 function projectNext() {
-    if (projectIndex < 3) {
-        projectIndex++;
-    }
-
+    let currentProject = document.getElementById("project" + projectIndex);
+    projectIndex = (projectIndex % 3) + 1;
     let nextProject = document.getElementById("project" + projectIndex);
-    let currentProject = document.getElementById("project" + (projectIndex - 1));
 
     nextProject.style.display = "flex";
     currentProject.style.display = "none";
-
 }
 
-function projectPrevious () {
-    if (projectIndex > 1) {
-        projectIndex--;
-    }
-
+function projectPrevious() {
+    let currentProject = document.getElementById("project" + projectIndex);
+    projectIndex = (projectIndex - 2 + 3) % 3 + 1;
     let previousProject = document.getElementById("project" + projectIndex);
-    let currentProject = document.getElementById("project" + (projectIndex + 1));
 
     previousProject.style.display = "flex";
     currentProject.style.display = "none";
