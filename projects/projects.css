@@ -63,3 +63,46 @@ body {
     width: 10vw;
     height: 10vh;
 }
+
+h1,
+p {
+    color: black;
+    font-family: playfair display;
+}
+
+.one {
+    background-color: aliceblue;
+}
+
+.projectOneImage {
+    margin: 10px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectOneImage img {
+    box-shadow: 5px 10px #000;
+}
+
+.project1 {
+    background-color: aliceblue;
+    width: 45vw;
+    height: 35vh;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.projectOneText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 10px;
+}
