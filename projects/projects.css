@@ -74,6 +74,8 @@ p {
     background-color: aliceblue;
 }
 
+/*project one div styling*/
+
 .projectOneImage {
     margin: 10px;
     width: 350px;
@@ -105,4 +107,57 @@ p {
     align-items: center;
     width: 200px;
     margin: 10px;
+}
+
+/*project two div styling*/
+
+.project2 {
+    display: none;
+    background-color: aliceblue;
+    width: 45vw;
+    height: 35vh;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.projectTwoImage {
+    margin: 10px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectTwoImage img {
+    box-shadow: 5px 10px #000;
+    margin: 5px;
+}
+
+
+/* project three div styling */
+.project3 {
+    display: none;
+    background-color: aliceblue;
+    width: 45vw;
+    height: 35vh;
+    justify-content: space-around;
+    text-align: center;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.projectThreeImage {
+    margin: 10px;
+    width: 350px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectTwoImage img {
+    box-shadow: 5px 10px #000;
 }
