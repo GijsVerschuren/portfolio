@@ -122,9 +122,85 @@
                     <path d="M68 4V20H15.32L29.64 5.64L24 0L0 24L24 48L29.64 42.36L15.32 28H76V4H68Z" fill="white" />
                 </svg>
             </div>
+            <form action="index.php" method="post" class="contact-form">
+                <input type="text" name="email" placeholder="Email">
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Message"></textarea>
+                <button type="submit" name="submit">Send Email</button>
+            </form>
         </div>
     </div>
     </div>
 </body>
 
 </html>
+<?php
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+require '../vendor/autoload.php';
+
+$env = parse_ini_file('.env');
+
+$mail = new PHPMailer(true);
+
+use Monolog\Level;
+use Monolog\Logger;
+use Monolog\Handler\StreamHandler;
+use Monolog\Handler\FirePHPHandler;
+
+// Create the logger
+$logger = new Logger('my_logger');
+// Now add some handlers
+$logger->pushHandler(new StreamHandler(__DIR__ . '/my_app.log', Level::Info));
+$logger->pushHandler(new FirePHPHandler());
+
+// You can now use your logger
+$logger->info('My logger is now ready');
+
+$logger->info('Adding a new user', ['password' => "$env[password]", 'email' => "$env[email]"]);
+
+if (isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    try {
+        //Server settings
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
+        $mail->SMTPDebug = 0;
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = "$env[email]";                     //SMTP username
+        $mail->Password   = "$env[password]";                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+        //Recipients
+        $mail->setFrom('from@example.com', 'Mailer');
+        $mail->addAddress('gijs.verschuren.gv@gmail.com', 'Joe User');     //Add a recipient
+        $mail->addAddress('ellen@example.com');               //Name is optional
+        $mail->addReplyTo('info@example.com', 'Information');
+        $mail->addCC('cc@example.com');
+        $mail->addBCC('bcc@example.com');
+
+        // //Attachments
+        // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Portfolio Email';
+        $mail->Body    = ' Email: ' . $email . '<br> Subject: ' . $subject . '<br> Message: ' . $message;
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+        $mail->send();
+        echo '<script>alert("Message has been sent")</script>';
+    } catch (Exception $e) {
+        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+}
+?>
