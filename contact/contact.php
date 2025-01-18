@@ -122,7 +122,7 @@
                     <path d="M68 4V20H15.32L29.64 5.64L24 0L0 24L24 48L29.64 42.36L15.32 28H76V4H68Z" fill="white" />
                 </svg>
             </div>
-            <form action="index.php" method="post" class="contact-form">
+            <form action="contact.php" method="post" class="contact-form">
                 <input type="text" name="email" placeholder="Email">
                 <input type="text" name="subject" placeholder="Subject">
                 <textarea name="message" placeholder="Message"></textarea>
