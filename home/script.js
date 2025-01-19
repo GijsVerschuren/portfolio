@@ -7,24 +7,33 @@ function HomeText() {
     textDiv.innerHTML = '';
     textDiv.appendChild(svgElement);
 
-    oneDiv.addEventListener('mouseover', () => {
-        textDiv.classList.add("show");
+    if (window.innerWidth < 600) {
+        oneDiv.addEventListener('click', () => {
+            textDiv.classList.toggle("show");
+        });
+    } else {
+        oneDiv.addEventListener('mouseover', () => {
+            textDiv.classList.add("show");
+        });
 
-    });
-
-    oneDiv.addEventListener('mouseout', () => {
-        textDiv.classList.remove("show");
-
-    });
+        oneDiv.addEventListener('mouseout', () => {
+            textDiv.classList.remove("show");
+        });
+    }
 
     oneDiv.addEventListener('click', () => {
-        location.href = "index.html";
+        if (window.innerWidth < 600) {
+            setTimeout(() => {
+                location.href = "index.html";
+                textDiv.classList.remove("show");
+            }, 3500);
+        } else {
+            location.href = "index.html";
+        }
     });
 }
 
 document.addEventListener('DOMContentLoaded', HomeText);
-
-
 
 //show project text
 function projectText() {
@@ -35,24 +44,33 @@ function projectText() {
     projectDiv.innerHTML = '';
     projectDiv.appendChild(svgElement);
 
-    twoDiv.addEventListener('mouseover', () => {
-        projectDiv.classList.add("show");
+    if (window.innerWidth < 600) {
+        twoDiv.addEventListener('click', () => {
+            projectDiv.classList.toggle("show");
+        });
+    } else {
+        twoDiv.addEventListener('mouseover', () => {
+            projectDiv.classList.add("show");
+        });
 
-    });
-
-    twoDiv.addEventListener('mouseout', () => {
-        projectDiv.classList.remove("show");
-
-    });
+        twoDiv.addEventListener('mouseout', () => {
+            projectDiv.classList.remove("show");
+        });
+    }
 
     twoDiv.addEventListener('click', () => {
-        location.href = "../projects/projects.html";
+        if (window.innerWidth < 600) {
+            setTimeout(() => {
+                location.href = "../projects/projects.html";
+                projectDiv.classList.remove("show");
+            }, 3500);
+        } else {
+            location.href = "../projects/projects.html";
+        }
     });
 }
 
 document.addEventListener('DOMContentLoaded', projectText);
-
-
 
 //show about me text
 function AboutMeText() {
@@ -63,25 +81,33 @@ function AboutMeText() {
     aboutMeDiv.innerHTML = '';
     aboutMeDiv.appendChild(svgElement);
 
-    threeDiv.addEventListener('mouseover', () => {
-        aboutMeDiv.classList.add("show");
+    if (window.innerWidth < 600) {
+        threeDiv.addEventListener('click', () => {
+            aboutMeDiv.classList.toggle("show");
+        });
+    } else {
+        threeDiv.addEventListener('mouseover', () => {
+            aboutMeDiv.classList.add("show");
+        });
 
-    });
-
-    threeDiv.addEventListener('mouseout', () => {
-        aboutMeDiv.classList.remove("show");
-
-    });
+        threeDiv.addEventListener('mouseout', () => {
+            aboutMeDiv.classList.remove("show");
+        });
+    }
 
     threeDiv.addEventListener('click', () => {
-        location.href = "../aboutme/aboutme.html";
+        if (window.innerWidth < 600) {
+            setTimeout(() => {
+                location.href = "../aboutme/aboutme.html";
+                aboutMeDiv.classList.remove("show");
+            }, 3500);
+        } else {
+            location.href = "../aboutme/aboutme.html";
+        }
     });
 }
 
 document.addEventListener('DOMContentLoaded', AboutMeText);
-
-
-
 
 //show contact text
 function contactText() {
@@ -92,18 +118,29 @@ function contactText() {
     contactDiv.innerHTML = '';
     contactDiv.appendChild(svgElement);
 
-    fourDiv.addEventListener('mouseover', () => {
-        contactDiv.classList.add("show");
+    if (window.innerWidth < 600) {
+        fourDiv.addEventListener('click', () => {
+            contactDiv.classList.toggle("show");
+        });
+    } else {
+        fourDiv.addEventListener('mouseover', () => {
+            contactDiv.classList.add("show");
+        });
 
-    });
-
-    fourDiv.addEventListener('mouseout', () => {
-        contactDiv.classList.remove("show");
-
-    });
+        fourDiv.addEventListener('mouseout', () => {
+            contactDiv.classList.remove("show");
+        });
+    }
 
     fourDiv.addEventListener('click', () => {
-        location.href = "../contact/contact.php";
+        if (window.innerWidth < 600) {
+            setTimeout(() => {
+                location.href = "../contact/contact.php";
+                contactDiv.classList.remove("show");
+            }, 3500);
+        } else {
+            location.href = "../contact/contact.php";
+        }
     });
 }
 
