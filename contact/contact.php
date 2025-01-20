@@ -11,7 +11,6 @@
 
 <body>
     <div class="container">
-        <img src="/svg/plank.svg" alt="">
         <svg width="969" height="637" viewBox="0 0 969 637" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="58" y="41" width="861" height="545" fill="#1A1010" />
             <g clip-path="url(#clip0_64_4)">
@@ -115,6 +114,7 @@
                 </clipPath>
             </defs>
         </svg>
+
 
         <div class="content">
             <div class="linkDiv" onclick="backToHome()">

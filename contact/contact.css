@@ -71,7 +71,7 @@ body {
 
 .contact-form input[type="text"],
 .contact-form textarea {
-    width: 80%;
+    width: 45vw;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
@@ -80,7 +80,8 @@ body {
 }
 
 .contact-form textarea {
-    height: 150px;
+    height: 20vh;
+    width: 45vw;
 }
 
 .contact-form button {
@@ -98,3 +99,4 @@ body {
 .contact-form button:hover {
     background-color: #5a189a;
 }
+
