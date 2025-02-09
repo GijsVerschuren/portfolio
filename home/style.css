@@ -159,7 +159,7 @@ body {
 
 }
 
-.text.show path {
+.show path {
     animation: dash 3s linear forwards;
     /* transition: fill 0.3s !important; */
 }

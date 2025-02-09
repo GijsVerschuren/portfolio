@@ -7,27 +7,24 @@ function HomeText() {
     textDiv.innerHTML = '';
     textDiv.appendChild(svgElement);
 
-    if (window.innerWidth < 600) {
-        oneDiv.addEventListener('click', () => {
-            textDiv.classList.toggle("show");
-        });
-    } else {
-        oneDiv.addEventListener('mouseover', () => {
-            textDiv.classList.add("show");
-        });
 
-        oneDiv.addEventListener('mouseout', () => {
-            textDiv.classList.remove("show");
-        });
-    }
+
+    oneDiv.addEventListener('mouseover', () => {
+        textDiv.classList.add("show");
+    });
+
+    oneDiv.addEventListener('mouseout', () => {
+        textDiv.classList.remove("show");
+    });
 
     oneDiv.addEventListener('click', () => {
         if (window.innerWidth < 600) {
             setTimeout(() => {
                 location.href = "index.html";
-                textDiv.classList.remove("show");
             }, 3500);
-        } else {
+            textDiv.classList.add("show");
+            textDiv.style.display = 'block';
+        } else if (window.innerWidth > 600) {
             location.href = "index.html";
         }
     });
@@ -44,26 +41,21 @@ function projectText() {
     projectDiv.innerHTML = '';
     projectDiv.appendChild(svgElement);
 
-    if (window.innerWidth < 600) {
-        twoDiv.addEventListener('click', () => {
-            projectDiv.classList.toggle("show");
-        });
-    } else {
-        twoDiv.addEventListener('mouseover', () => {
-            projectDiv.classList.add("show");
-        });
+    twoDiv.addEventListener('mouseover', () => {
+        projectDiv.classList.add("show");
+    });
 
-        twoDiv.addEventListener('mouseout', () => {
-            projectDiv.classList.remove("show");
-        });
-    }
+    twoDiv.addEventListener('mouseout', () => {
+        projectDiv.classList.remove("show");
+    });
 
     twoDiv.addEventListener('click', () => {
         if (window.innerWidth < 600) {
             setTimeout(() => {
                 location.href = "../projects/projects.html";
-                projectDiv.classList.remove("show");
             }, 3500);
+            projectDiv.classList.add("show");
+            projectDiv.style.display = 'block';
         } else {
             location.href = "../projects/projects.html";
         }
@@ -81,26 +73,23 @@ function AboutMeText() {
     aboutMeDiv.innerHTML = '';
     aboutMeDiv.appendChild(svgElement);
 
-    if (window.innerWidth < 600) {
-        threeDiv.addEventListener('click', () => {
-            aboutMeDiv.classList.toggle("show");
-        });
-    } else {
-        threeDiv.addEventListener('mouseover', () => {
-            aboutMeDiv.classList.add("show");
-        });
 
-        threeDiv.addEventListener('mouseout', () => {
-            aboutMeDiv.classList.remove("show");
-        });
-    }
+    threeDiv.addEventListener('mouseover', () => {
+        aboutMeDiv.classList.add("show");
+    });
+
+    threeDiv.addEventListener('mouseout', () => {
+        aboutMeDiv.classList.remove("show");
+    });
 
     threeDiv.addEventListener('click', () => {
         if (window.innerWidth < 600) {
             setTimeout(() => {
                 location.href = "../aboutme/aboutme.html";
-                aboutMeDiv.classList.remove("show");
             }, 3500);
+            aboutMeDiv.classList.add("show");
+            aboutMeDiv.style.display = 'block';
+
         } else {
             location.href = "../aboutme/aboutme.html";
         }
@@ -118,26 +107,22 @@ function contactText() {
     contactDiv.innerHTML = '';
     contactDiv.appendChild(svgElement);
 
-    if (window.innerWidth < 600) {
-        fourDiv.addEventListener('click', () => {
-            contactDiv.classList.toggle("show");
-        });
-    } else {
-        fourDiv.addEventListener('mouseover', () => {
-            contactDiv.classList.add("show");
-        });
+    fourDiv.addEventListener('mouseover', () => {
+        contactDiv.classList.add("show");
+    });
 
-        fourDiv.addEventListener('mouseout', () => {
-            contactDiv.classList.remove("show");
-        });
-    }
+    fourDiv.addEventListener('mouseout', () => {
+        contactDiv.classList.remove("show");
+    });
+
 
     fourDiv.addEventListener('click', () => {
         if (window.innerWidth < 600) {
             setTimeout(() => {
                 location.href = "../contact/contact.php";
-                contactDiv.classList.remove("show");
             }, 3500);
+            contactDiv.classList.add("show");
+            contactDiv.style.display = 'block';
         } else {
             location.href = "../contact/contact.php";
         }
