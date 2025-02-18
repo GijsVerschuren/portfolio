@@ -17,3 +17,19 @@ function projectPrevious() {
     previousProject.style.display = "flex";
     currentProject.style.display = "none";
 }
+
+function switchSVG() {
+    const plankSVG = document.getElementById("plankSVG");
+    const plankPhoneSVG = document.getElementById("plankPhoneSVG");
+
+    if (window.innerWidth < 600) {
+        plankSVG.style.display = "none";
+        plankPhoneSVG.style.display = "block";
+    } else {
+        plankSVG.style.display = "block";
+        plankPhoneSVG.style.display = "none";
+    }
+}
+
+window.addEventListener("resize", switchSVG);
+window.addEventListener("load", switchSVG);
